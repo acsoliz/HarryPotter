@@ -5,6 +5,7 @@ const initialState = {
 };
 
 export default function rootReducer(state = initialState, action) {
+	const allCharacters = state.charactersAux;
 	switch (action.type) {
 		case GET_CHARACTERS:
 			return {
@@ -13,7 +14,6 @@ export default function rootReducer(state = initialState, action) {
 				charactersAux : action.payload
 			};
 		case FILTER_ANCESTRY:
-			const allCharacters = state.charactersAux;
 			const charsFiltered =
 
 					action.payload === 'All' ? allCharacters :
@@ -23,7 +23,12 @@ export default function rootReducer(state = initialState, action) {
 				characters:charsFiltered
 			};
 		case FILTER_HOUSE:
+			const charsFiltered =
+
+					action.payload === 'All' ? allCharacters :
+					allCharacters.filter((el) => el.ancestry === action.payload);
 			
+
 
 		default:
 			return state;
