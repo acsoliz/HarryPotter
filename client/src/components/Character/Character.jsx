@@ -1,13 +1,39 @@
-import React from 'react';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Character.css";
 
 export default function Character({ name, actor, id, house, ancestry, image }) {
-	return (
-		<div className="contenedor-card">
-			<h2 key={id}>{name}</h2>
-			<span>{actor}</span>
-			<span>{ancestry}</span>
-			<span>{house}</span>
-			<img src={image} width="160" height="280" alt=" " />
-		</div>
-	);
+  return (
+    <>     
+      <li>
+        <Link to="" className="card">
+          <img
+            src={image}
+            className="card__image"
+            alt=""
+            // width="160" height="280"
+          />
+          <div className="card__overlay">
+            <div className="card__header">
+              <svg className="card__arc" xmlns="http://www.w3.org/2000/svg">
+                <path />
+              </svg>
+              <img className="card__thumb" src={image} alt="" />
+              <div className="card__header-text">
+                <h3 className="card__title">{name}</h3>
+                {/* <span class="card__status">1 hour ago</span> */}
+              </div>
+            </div>
+            <p className="card__description">
+              <span>Actor: {actor} </span>
+              <br />
+              <span>Ancestry: {ancestry} </span>
+              <br />
+              <span>House: {house}</span>
+            </p>
+          </div>
+        </Link>
+      </li>
+    </>
+  );
 }

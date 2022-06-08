@@ -18,6 +18,8 @@ function App() {
 			<Routes>
 				<Route exact path="/" element={<Home />} />
 				<Route path="/main" element={<Main />} />
+				<Route path="/characters/id" element={<Main />} />
+				
 			</Routes>
 		</div>
 	);

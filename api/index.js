@@ -25,7 +25,7 @@ conn.sync({ force: true }).then(async () => {
 			Character.create({
 				name     : characters.name,
 				ancestry : characters.ancestry.length > 2 ? characters.ancestry : 'No tiene ancestro'  ,
-				house    : characters.house,
+				house    : characters.house.length>2 ?characters.house: 'Unknown',
 				actor    : characters.actor,
 				image    : characters.image
 			});
