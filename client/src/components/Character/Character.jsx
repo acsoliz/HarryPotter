@@ -4,9 +4,9 @@ import "./Character.css";
 
 export default function Character({ name, actor, id, house, ancestry, image }) {
   return (
-    <>     
+    <>
       <li>
-        <Link to="" className="card">
+        <Link to={`/characters/${id}`} className="card">
           <img
             src={image}
             className="card__image"

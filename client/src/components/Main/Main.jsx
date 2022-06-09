@@ -124,6 +124,7 @@ const Main = () => {
                   ancestry={pj.ancestry}
                   image={pj.image}
                   key={pj.id}
+                  id={pj.id}
                 />
               ))
             ) : (

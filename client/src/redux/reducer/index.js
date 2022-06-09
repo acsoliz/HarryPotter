@@ -1,8 +1,16 @@
-import { GET_CHARACTERS, FILTER_ANCESTRY, FILTER_HOUSE , BY_ALPH} from "../actions";
+import {
+  GET_CHARACTERS,
+  FILTER_ANCESTRY,
+  FILTER_HOUSE,
+  BY_ALPH,
+  GET_BY_NAME,
+  GET_DETAIL,
+} from "../actions";
 const initialState = {
   characters: [],
   charactersAux: [],
   filters: [],
+  charDetail: [],
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -13,6 +21,16 @@ export default function rootReducer(state = initialState, action) {
         ...state,
         characters: action.payload,
         charactersAux: action.payload,
+      };
+    case GET_BY_NAME:
+      return {
+        ...state,
+        characters: action.payload,
+      };
+    case GET_DETAIL:
+      return {
+        ...state,
+        charDetail: action.payload,
       };
 
     //-----------------------------

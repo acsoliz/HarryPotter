@@ -30,6 +30,15 @@ module.exports = (sequelize) => {
 			},
 			actor    : {
 				type : DataTypes.STRING
+			},
+			species    : {
+				type : DataTypes.STRING
+			},
+			dateOfBirth    : {
+				type : DataTypes.STRING
+			},
+			wand    : {
+				type : DataTypes.TEXT
 			}
 		},
 		{ timestamps: false }

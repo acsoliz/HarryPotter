@@ -1,0 +1,77 @@
+html,
+body {
+  font-family: "Athiti", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.438)),
+    url("../../assets/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.landing-container {
+  align-content: center;
+}
+.tittle-container {
+  padding: 10px;
+  margin: 10px;
+}
+.avatar{
+    width: 10%;
+}
+.btn-container{
+    
+    padding: 50px;
+    margin: 30px;
+}
+
+.img-tittle {
+  margin-top: 10px;
+  margin:10px;
+  padding: 25px;
+  width: 45%;
+}
+.link-button {
+  padding-top: 20px;
+  margin: 20px;
+}
+.btn-7 {
+  background: #000;
+  border-radius: 8px;
+  color: #fff;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  z-index: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: large;
+}
+.btn-7:hover {
+  background: transparent;
+  color: #000;
+}
+.btn-7:before,
+.btn-7:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100%;
+  height: 50%;
+  right: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-7:before {
+  top: 0;
+}
+.btn-7:after {
+  bottom: 0;
+}
+.btn-7:hover:before,
+.btn-7:hover:after {
+  height: 0;
+  background-color: #000;
+}
