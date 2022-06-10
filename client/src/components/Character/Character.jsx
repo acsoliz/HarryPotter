@@ -15,7 +15,7 @@ export default function Character({ name, actor, id, house, ancestry, image }) {
           />
           <div className="card__overlay">
             <div className="card__header">
-              <svg className="card__arc" xmlns="http://www.w3.org/2000/svg">
+              <svg className="card__arc">
                 <path />
               </svg>
               <img className="card__thumb" src={image} alt="" />
