@@ -136,6 +136,7 @@ const Main = () => {
           </div>
           <div>
             <button onClick={openModal}>openModal</button>
+            <Link to="/activities">Activities View</Link>
           </div>
         </aside>
 

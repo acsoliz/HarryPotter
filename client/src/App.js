@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import React, { useEffect } from "react";
 import "./App.css";
 import Detail from "./components/Detail/Detail";
+import Activities from "./components/Activities/Activities";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/main" element={<Main />} />
         <Route path="/characters/:id" element={<Detail />} />
+        <Route path="/activities" element={<Activities />} />
       </Routes>
     </div>
   );

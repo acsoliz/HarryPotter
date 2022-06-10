@@ -28,18 +28,21 @@ conn.sync({ force: false }).then(async () => {
     });
     // await Character.bulkCreate(diexPersonas);
     for (const characters of diexPersonas) {
-      Character.create({
-        name: characters.name,
-        ancestry:
-          characters.ancestry.length > 2
-            ? characters.ancestry
-            : "No tiene ancestro",
-        house: characters.house.length > 2 ? characters.house : "Unknown",
-        actor: characters.actor,
-        image: characters.image,
-        species: characters.species.length > 2 ? characters.species : "Unknown",
-        dateOfBirth: characters.dateOfBirth,
-        wand: characters.wand ? JSON.stringify(characters.wand) : "dont have",
+      Character.findOrCreate({
+        where: {
+          name: characters.name,
+          ancestry:
+            characters.ancestry.length > 2
+              ? characters.ancestry
+              : "No tiene ancestro",
+          house: characters.house.length > 2 ? characters.house : "Unknown",
+          actor: characters.actor,
+          image: characters.image,
+          species:
+            characters.species.length > 2 ? characters.species : "Unknown",
+          dateOfBirth: characters.dateOfBirth,
+          wand: characters.wand ? JSON.stringify(characters.wand) : "dont have",
+        },
       });
     }
   } catch (e) {
