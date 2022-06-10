@@ -5,12 +5,15 @@ import {
   BY_ALPH,
   GET_BY_NAME,
   GET_DETAIL,
+  NEW_ACTIVITY,
+  GET_ACTIVITIES,
 } from "../actions";
 const initialState = {
   characters: [],
   charactersAux: [],
   filters: [],
   charDetail: [],
+  activities: [],
 };
 
 export default function rootReducer(state = initialState, action) {
@@ -92,6 +95,15 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         characters: byAlph,
+      };
+    case NEW_ACTIVITY:
+      return {
+        ...state,
+      };
+    case GET_ACTIVITIES:
+      return {
+        ...state,
+        activities: action.payload,
       };
 
     default:

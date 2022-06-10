@@ -2,7 +2,7 @@ const server = require("./src/app.js");
 const { default: axios } = require("axios");
 const { conn, Character } = require("./src/db.js");
 
-conn.sync({ force: true }).then(async () => {
+conn.sync({ force: false }).then(async () => {
   try {
     let diexPersonas = [];
 

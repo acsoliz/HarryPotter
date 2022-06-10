@@ -5,7 +5,10 @@ export const FILTER_HOUSE = "FILTER_HOUSE";
 export const BY_ALPH = "BY_ALPH";
 export const GET_BY_NAME = "GET_BY_NAME";
 export const GET_DETAIL = "GET_DETAIL";
+export const NEW_ACTIVITY = "NEW_ACTIVITY";
+export const GET_ACTIVITIES = "GET_ACTIVITIES";
 const URL_GET = "http://localhost:3001/characters";
+const URL_ACTIVITIES = "http://localhost:3001/activities";
 
 export const getAllChars = () => {
   return async (dispatch) => {
@@ -42,7 +45,7 @@ export const findCharByName = (name) => {
 export const getCharDetail = (id) => {
   return async (dispatch) => {
     try {
-      const {data} = await axios.get(`${URL_GET}/filterId/${id}`);
+      const { data } = await axios.get(`${URL_GET}/filterId/${id}`);
       console.log(data);
       return dispatch({
         type: GET_DETAIL,
@@ -74,5 +77,34 @@ export const sortByAlph = (payload) => {
   return {
     type: BY_ALPH,
     payload,
+  };
+};
+
+export const createActivity = (activity) => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.post(`${URL_ACTIVITIES}/create`, activity);
+      console.log(data);
+      return dispatch({
+        type: NEW_ACTIVITY,
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+export const getActivities = () => {
+  return async (dispatch) => {
+    try {
+      const { data } = await axios.get(URL_ACTIVITIES);
+      console.log(data);
+      return dispatch({
+        type: GET_ACTIVITIES,
+        payload: data,
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 };

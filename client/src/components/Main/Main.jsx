@@ -12,6 +12,8 @@ import {
 } from "../../redux/actions";
 import Searchbar from "../Searchbar/Searchbar";
 import Pagination from "../Pagination/Pagination";
+import Modal from "../Modal/Modal";
+import useModal from "../../hooks/useModal";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -19,7 +21,7 @@ const Main = () => {
 
   //------------------PAGINATION
   const [currentPage, setCurrentPage] = useState(1); //Pagina actual
-  const [charsByPage, setCharsByPage] = useState(9); // Cuantos videojuegos por page
+  const [charsByPage, setCharsByPage] = useState(8); // Cuantos videojuegos por page
   const lastChar = currentPage * charsByPage;
   const firstChar = lastChar - charsByPage;
   const currentChar = characters && characters.slice(firstChar, lastChar); //
@@ -64,13 +66,18 @@ const Main = () => {
     });
   };
   //--------------------------------
+
+  const [isOpenModal, openModal, closeModal] = useModal();
+
   return (
     <div>
       <div className="tittle">
         <img src="" alt="" />
         <h1>Harry Potter</h1>
       </div>
+
       <div className="container">
+        <Modal isOpen={isOpenModal} closeModal={closeModal} />
         <aside className="side">
           <h2>Controllers</h2>
           <div>
@@ -126,6 +133,9 @@ const Main = () => {
                 </form>
               </div>
             </div>
+          </div>
+          <div>
+            <button onClick={openModal}>openModal</button>
           </div>
         </aside>
 
