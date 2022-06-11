@@ -12,8 +12,6 @@ import {
 } from "../../redux/actions";
 import Searchbar from "../Searchbar/Searchbar";
 import Pagination from "../Pagination/Pagination";
-import Modal from "../Modal/Modal";
-import useModal from "../../hooks/useModal";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -67,17 +65,17 @@ const Main = () => {
   };
   //--------------------------------
 
-  const [isOpenModal, openModal, closeModal] = useModal();
+  
 
   return (
     <div>
-      <div className="tittle">
+      {/* <div className="tittle">
         <img src="" alt="" />
         <h1>Harry Potter</h1>
-      </div>
+      </div> */}
 
       <div className="container">
-        <Modal isOpen={isOpenModal} closeModal={closeModal} />
+      
         <aside className="side">
           <h2>Controllers</h2>
           <div>
@@ -135,25 +133,14 @@ const Main = () => {
             </div>
           </div>
           <div>
-            <button onClick={openModal}>openModal</button>
-            <Link to="/activities">Activities View</Link>
+            <Link to="/activities">
+              <button>Activities View</button>
+            </Link>
           </div>
         </aside>
 
         <div className="content">
-          {Array.isArray(characters) ? (
-            <Pagination
-              characters={characters && characters.length}
-              charsByPage={charsByPage}
-              paginated={paginated}
-              currentPage={currentPage}
-              setCurrentPage={setCurrentPage}
-            />
-          ) : (
-            ""
-          )}
-
-          <ul className="cards">
+          <div className="cards">
             {currentChar.length > 0 ? (
               currentChar.map((pj) => (
                 <Character
@@ -169,7 +156,18 @@ const Main = () => {
             ) : (
               <div>Loading...</div>
             )}
-          </ul>
+          </div>
+          {Array.isArray(characters) ? (
+            <Pagination
+              characters={characters && characters.length}
+              charsByPage={charsByPage}
+              paginated={paginated}
+              currentPage={currentPage}
+              setCurrentPage={setCurrentPage}
+            />
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

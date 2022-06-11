@@ -1,19 +1,43 @@
-/* .card {
-  margin: 20px;
-  width: 20rem;
-  height: 9rem;
-  border-radius: 15px;
-  border: solid;
+.container-act {
+  margin: 8px;
+  padding: 12px;
+}
+.btn-volver {
+  align-items: left;
+  text-align: left;
+}
+.cards-wrapper {
+
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 90%;
+  margin: 2rem;
+  border-radius: 20px;
+  justify-content: space-evenly;
+  overflow-y: auto;
+  height: 18rem;
+}
+
+
+.card-act {
+  border-radius: 20px;
+  height: 7cm;
+  width: 5cm;
+  border: 1px solid #fff;
+  margin-bottom: 2rem;
+  /* padding-bottom: 5px; */
+
 }
 
 .card-title {
   margin-top: 5px;
 }
-.date-place{
-
+.date-place {
 }
-.comments{}
+.comments {
+  /* width: 120px; */
+}
 .card-body {
   margin-top: 0px !important;
   padding-top: 0px !important;
-} */
+}

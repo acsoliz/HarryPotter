@@ -15,10 +15,10 @@ async function getActivities(req, res, next) {
 }
 
 async function createActivities(req, res, next) {
-  const { name, date, place, comments } = req.body;
+  const { title, date, place, comments } = req.body;
   try {
     const activity = await Activity.create({
-      name,
+      title,
       date,
       place,
       comments,

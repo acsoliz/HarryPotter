@@ -25,8 +25,8 @@ export default function Character({ name, actor, id, house, ancestry, image }) {
               </div>
             </div>
             <p className="card__description">
-              <span>Actor: {actor} </span>
-              <br />
+              {/* <span>Actor: {actor} </span>
+              <br /> */}
               <span>Ancestry: {ancestry} </span>
               <br />
               <span>House: {house}</span>
