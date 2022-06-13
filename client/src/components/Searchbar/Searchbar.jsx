@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { findCharByName } from "../../redux/actions";
+import './Searchbar.css'
 
 const Searchbar = () => {
   const dispatch = useDispatch();
@@ -15,15 +16,17 @@ const Searchbar = () => {
     dispatch(findCharByName(name));
   };
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Buscar..."
-        onChange={(e) => handleInputChange(e)}
-      />
-      <button type="button" onClick={() => handleOnClickSearch()}>
-        Search
-      </button>
+    <div className="search-box">
+      <form className='search-form'>
+        <input
+          type="text"
+          placeholder="Buscar..."
+          onChange={(e) => handleInputChange(e)}
+        />
+        <button className='search-button  btn-search' type="button" onClick={() => handleOnClickSearch()}>
+          Search
+        </button>
+      </form>
     </div>
   );
 };

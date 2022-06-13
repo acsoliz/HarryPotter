@@ -65,8 +65,6 @@ const Main = () => {
   };
   //--------------------------------
 
-  
-
   return (
     <div>
       {/* <div className="tittle">
@@ -75,67 +73,81 @@ const Main = () => {
       </div> */}
 
       <div className="container">
-      
         <aside className="side">
-          <h2>Controllers</h2>
-          <div>
-            <Searchbar />
-          </div>
-          <div>
-            <label>Ancestrys</label>
-            <br />
-            <select onChange={(e) => handleOnChangeAncestry(e)}>
-              <option value={"All"}>Todos</option>
-              <option value={"half-blood"}>half-blood</option>
-              <option value={"muggleborn"}>muggleborn</option>
-              <option value={"pure-blood"}>pure-blood</option>
-              <option value={"No tiene ancestro"}>No tiene ancestro</option>
-              <option value={"squib"}>squib</option>
-            </select>
-          </div>
-
-          <div>
-            <label>House</label>
-            <br />
-            <select onChange={(e) => handleOnChangeHouses(e)}>
-              <option value={"All"}>Todos</option>
-              <option value={"Slytherin"}>Slytherin</option>
-              <option value={"Gryffindor"}>Gryffindor</option>
-              <option value={"Hufflepuff"}>Hufflepuff</option>
-              <option value={"Ravenclaw"}>Ravenclaw</option>
-              <option value={"Unknown"}>Unknown</option>
-            </select>
-          </div>
-          <div>
-            <div className="inputsContainer">
-              <div className="items">
-                <form className="nav-items">
-                  <label>
-                    <input
-                      type="radio"
-                      checked={orderAlph.checked === "a-z"}
-                      onChange={handleChangeAlphabetic}
-                      value="a-z"
-                    />
-                    a-z
-                  </label>
-                  <label>
-                    <input
-                      type="radio"
-                      checked={orderAlph.checked === "z-a"}
-                      onChange={handleChangeAlphabetic}
-                      value="z-a"
-                    />
-                    z-a
-                  </label>
-                </form>
+          <div className="div--container">
+            <h2>Controllers</h2>
+            <div className="div-container-hijo">
+              <Searchbar />
+            </div>
+            <div className="div-container-hijo">
+              <label>Ancestrys</label>
+              <br />
+              <div className="dropdown dropdown-dark">
+                <select
+                  className="dropdown-select"
+                  onChange={(e) => handleOnChangeAncestry(e)}
+                >
+                  <option value={"All"} className="">
+                    Todos
+                  </option>
+                  <option value={"half-blood"}>half-blood</option>
+                  <option value={"muggleborn"}>muggleborn</option>
+                  <option value={"pure-blood"}>pure-blood</option>
+                  <option value={"No tiene ancestro"}>No tiene ancestro</option>
+                  <option value={"squib"}>squib</option>
+                </select>
               </div>
             </div>
-          </div>
-          <div>
-            <Link to="/activities">
-              <button>Activities View</button>
-            </Link>
+
+            <div className="div-container-hijo">
+              <label>House</label>
+              <br />
+              <div className="dropdown dropdown-dark">
+                <select
+                  className="dropdown-select"
+                  onChange={(e) => handleOnChangeHouses(e)}
+                >
+                  <option value={"All"}>Todos</option>
+                  <option value={"Slytherin"}>Slytherin</option>
+                  <option value={"Gryffindor"}>Gryffindor</option>
+                  <option value={"Hufflepuff"}>Hufflepuff</option>
+                  <option value={"Ravenclaw"}>Ravenclaw</option>
+                  <option value={"Unknown"}>Unknown</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="div-container-hijo">
+              <div className="rb-container">
+                <input
+                  id="opt1"
+                  type="radio"
+                  name="radio"
+                  value="a-z"
+                  onChange={handleChangeAlphabetic}
+                />
+                <label for="opt1" class="label1">
+                  <span className="span-rd">A-z</span>
+                </label>
+                <input
+                  id="opt2"
+                  type="radio"
+                  name="radio"
+                  value="z-a"
+                  onChange={handleChangeAlphabetic}
+                />
+                <label for="opt2" class="label2">
+                  <span className="span-rd">Z-a</span>
+                </label>
+              </div>
+              {/* ---------------------------RADIO BUTTONS */}
+            </div>
+
+            <div className="div-container-hijo">
+              <Link to="/activities">
+                <button>Activities View</button>
+              </Link>
+            </div>
           </div>
         </aside>
 
