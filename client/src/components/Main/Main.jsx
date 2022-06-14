@@ -126,7 +126,7 @@ const Main = () => {
                   value="a-z"
                   onChange={handleChangeAlphabetic}
                 />
-                <label for="opt1" class="label1">
+                <label htmlFor="opt1" className="label1">
                   <span className="span-rd">A-z</span>
                 </label>
                 <input
@@ -136,7 +136,7 @@ const Main = () => {
                   value="z-a"
                   onChange={handleChangeAlphabetic}
                 />
-                <label for="opt2" class="label2">
+                <label htmlFor="opt2" className="label2">
                   <span className="span-rd">Z-a</span>
                 </label>
               </div>
@@ -145,7 +145,7 @@ const Main = () => {
 
             <div className="div-container-hijo">
               <Link to="/activities">
-                <button>Activities View</button>
+                <button className="custom-btn btn-7">Activities View</button>
               </Link>
             </div>
           </div>

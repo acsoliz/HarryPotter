@@ -186,7 +186,7 @@ const Modal = ({ isOpen, closeModal }) => {
           </div>
           <div className="user-box textarea-box">
             <textarea
-              maxlength="120"
+              // maxlength="120"
               name="comments"
               value={state.comments}
               onChange={handleInputChange}

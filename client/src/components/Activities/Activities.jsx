@@ -5,6 +5,7 @@ import useModal from "../../hooks/useModal";
 import Modal from "../Modal/Modal";
 import { useDispatch, useSelector } from "react-redux";
 import { getActivities } from "../../redux/actions";
+import titleActivities from "../../assets/activities.png"
 
 const Activities = () => {
   const [isOpenModal, openModal, closeModal] = useModal();
@@ -16,15 +17,21 @@ const Activities = () => {
   }, []);
   return (
     <div className="container-act">
-      <div>
+      <div className='headerss'>
         <Modal isOpen={isOpenModal} closeModal={closeModal} />
         <div className="btn-volver">
           <Link to="/main" className="link-button">
             <button className="custom-btn btn-7">volver</button>
           </Link>
-          <button onClick={openModal}>Add Activity</button>
+          {/* <div className="open--modal"> */}
         </div>
-        <h1>Activities</h1>
+        <div className="btn-activities">
+          <button onClick={openModal} className="custom-btn btn-7">
+            Add Activity
+          </button>
+          {/* </div> */}
+        </div>
+        <img src={titleActivities}/>
       </div>
       <div className="cards-wrapper cards-wrapper--fill">
         {activities[0] &&

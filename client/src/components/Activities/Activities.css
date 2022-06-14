@@ -2,12 +2,20 @@
   margin: 8px;
   padding: 12px;
 }
+.headerss{}
 .btn-volver {
   align-items: left;
   text-align: left;
+  float:left;
+  /* width: fit-content; */
+}
+.btn-activities {
+  align-items: right;
+  text-align: right;
+  float:right;
+  /* width: fit-content; */
 }
 .cards-wrapper {
-
   display: flex;
   flex-wrap: wrap;
   max-width: 90%;
@@ -18,7 +26,6 @@
   height: 20rem;
 }
 
-
 .card-act {
   border-radius: 20px;
   height: 7cm;
@@ -26,7 +33,6 @@
   border: 1px solid #fff;
   margin-bottom: 2rem;
   /* padding-bottom: 5px; */
-
 }
 
 .card-title {

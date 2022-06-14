@@ -15,7 +15,9 @@ const Detail = () => {
 
   const charDetail = useSelector((state) => state.charDetail);
   const character = charDetail[0];
-  //   console.log(JSON.parse(character.wand));
+  // const wand = JSON.parse(character.wand);
+  // console.log(JSON.parse(character.wand));
+  console.log(character);
 
   if (!character) {
     return (
@@ -27,35 +29,41 @@ const Detail = () => {
 
   return (
     <>
-      <div>
-        <div className="btn-container">
+      <div className="detail--container">
+        <div className="btn-cont-volver">
           <Link to="/main" className="link-button">
-            <button class="custom-btn btn-7">volver</button>
+            <button className="custom-btn btn-7">volver</button>
           </Link>
         </div>
-        <div>
-          <aside className="profile-card">
+        <div className="card--detail--container">
+          <div className="profile-card">
             <div>
-              <h1>{character.name}</h1>
-              <h1>{character.ancestry}</h1>
-              <h1>{character.house}</h1>
-              <h1>{character.actor}</h1>
-              <img src={character.image} />
+              <h1 className="character--name">{character.name}</h1>
             </div>
-            {/* <!-- bit of a bio; who are you? --> */}
-          </aside>
-        </div>
-        <div>
-          <aside className="profile-card">
-            <div>
-              <h1>{character.name}</h1>
-              <h1>{character.ancestry}</h1>
-              <h1>{character.house}</h1>
-              <h1>{character.actor}</h1>
-              <img src={character.image} />
+            <div className="div-detail-container">
+              <div className="div-image">
+                <img src={character.image} className="img-character" />
+              </div>
+              <div className="div-image-text">
+                
+                <div>
+                  <h3>Ancestry: {character.ancestry}</h3>
+                </div>
+                <div>
+                  <h3>House: {character.house}</h3>
+                </div>
+                <div>
+                  <h3>species: {character.species}</h3>
+                </div>
+                <div>
+                  <h3>actor: {character.actor}</h3>
+                </div>
+                <div>
+                  <h3>wand: {character.wand}</h3>
+                </div>
+              </div>
             </div>
-            {/* <!-- bit of a bio; who are you? --> */}
-          </aside>
+          </div>
         </div>
       </div>
     </>
