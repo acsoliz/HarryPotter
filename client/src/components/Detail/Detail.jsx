@@ -35,7 +35,7 @@ const Detail = () => {
             <button className="custom-btn btn-7">volver</button>
           </Link>
         </div>
-        <div className="card--detail--container">
+        {/* <div className="card--detail--container"> */}
           <div className="profile-card">
             <div>
               <h1 className="character--name">{character.name}</h1>
@@ -64,7 +64,7 @@ const Detail = () => {
               </div>
             </div>
           </div>
-        </div>
+        {/* </div> */}
       </div>
     </>
   );

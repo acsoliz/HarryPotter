@@ -213,7 +213,7 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
-  height: 50px;
+  height: 38px;
   width: 100px;
   position: absolute;
   border-radius: 10px;
@@ -245,7 +245,7 @@ input[type="radio"] {
 }
 .span-rd {
   display: flex;
-  height: 30px;
+  height: 40px;
   width: 50px;
   justify-content: center;
   align-items: center;

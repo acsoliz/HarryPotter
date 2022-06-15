@@ -80,6 +80,23 @@ const Main = () => {
               <Searchbar />
             </div>
             <div className="div-container-hijo">
+              <label>House</label>
+              <br />
+              <div className="dropdown dropdown-dark">
+                <select
+                  className="dropdown-select"
+                  onChange={(e) => handleOnChangeHouses(e)}
+                >
+                  <option value={"All"}>Todos</option>
+                  <option value={"Slytherin"}>Slytherin</option>
+                  <option value={"Gryffindor"}>Gryffindor</option>
+                  <option value={"Hufflepuff"}>Hufflepuff</option>
+                  <option value={"Ravenclaw"}>Ravenclaw</option>
+                  <option value={"Unknown"}>Unknown</option>
+                </select>
+              </div>
+            </div>
+            <div className="div-container-hijo">
               <label>Ancestrys</label>
               <br />
               <div className="dropdown dropdown-dark">
@@ -95,24 +112,6 @@ const Main = () => {
                   <option value={"pure-blood"}>pure-blood</option>
                   <option value={"No tiene ancestro"}>No tiene ancestro</option>
                   <option value={"squib"}>squib</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="div-container-hijo">
-              <label>House</label>
-              <br />
-              <div className="dropdown dropdown-dark">
-                <select
-                  className="dropdown-select"
-                  onChange={(e) => handleOnChangeHouses(e)}
-                >
-                  <option value={"All"}>Todos</option>
-                  <option value={"Slytherin"}>Slytherin</option>
-                  <option value={"Gryffindor"}>Gryffindor</option>
-                  <option value={"Hufflepuff"}>Hufflepuff</option>
-                  <option value={"Ravenclaw"}>Ravenclaw</option>
-                  <option value={"Unknown"}>Unknown</option>
                 </select>
               </div>
             </div>

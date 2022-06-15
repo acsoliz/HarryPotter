@@ -50,6 +50,7 @@
 .profile-card {
   border: solid;
   background: #ffb300;
+  border-radius: 30px;
   width: 156rem;
   height: 56px;
   position: absolute;
@@ -372,9 +373,9 @@
     }
     100% {
       width: 55rem;
-      height: 67%;
+      height: auto;
       background: #f5f106;
-      border-radius: 4px;
+      border-radius: 40px;
     }
   }
 }
