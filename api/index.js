@@ -3,6 +3,9 @@ const { default: axios } = require("axios");
 const { conn, Character } = require("./src/db.js");
 
 conn.sync({ force: false }).then(async () => {
+  server.listen(process.env.PORT, () => {
+    console.log("%s listening at 3001"); // eslint-disable-line no-console
+  });
   try {
     let diexPersonas = [];
 
@@ -48,8 +51,4 @@ conn.sync({ force: false }).then(async () => {
   } catch (e) {
     console.log("Error server", e);
   }
-
-  server.listen(3001, () => {
-    console.log("%s listening at 3001"); // eslint-disable-line no-console
-  });
 });
