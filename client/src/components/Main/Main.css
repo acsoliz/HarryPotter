@@ -1,3 +1,32 @@
+/* html,
+body {
+  font-family: "Athiti", sans-serif;
+  width: 100%; 
+  height: 100%;
+  margin: 0;
+  background: green;
+  background-size: cover;
+  background-repeat: no-repeat;
+   position: relative;
+} */
+.main-container {
+   /* align-content: center;
+  overflow: hidden;
+
+  font-family: "Athiti", sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.438)),
+    url("../../assets/maxresdefault.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;  */
+
+  /* min-height: 100%; */
+  /* position: relative; */
+  /* margin-bottom: 40px; */
+}
+
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -13,6 +42,7 @@
   /* border: 2px solid #777; */
   display: flex;
   padding: 12px;
+  height: 100%;
 }
 
 .container .content {
@@ -258,4 +288,12 @@ input:checked + label {
   background-position: 0 -90px;
   color: white;
   transition: 0.7s;
+}
+.footer {
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: red;
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import './Pagination.css'
+import "./Pagination.css";
 
 export default function Pagination({
   characters,
@@ -15,20 +15,23 @@ export default function Pagination({
   }
 
   return (
-    <div className='pag-container'>
+    <div className="pag-container">
       <div>
         {currentPage > 1 ? (
           <button onClick={() => setCurrentPage(currentPage - 1)}>Prev</button>
         ) : (
           " "
         )}
-        {pageNum &&
-          pageNum.map((e, i) => (
-            <label key={e} onClick={() => paginated(e)}>
-              {" "}
-              {currentPage + i}{" "}
-            </label>
-          ))}
+        <div className="div-list-container">
+          <ul>
+            {pageNum &&
+              pageNum.map((e, i) => (
+                <li key={e} onClick={() => paginated(e)}>
+                  <label>{currentPage + i}</label>
+                </li>
+              ))}
+          </ul>
+        </div>
         {currentPage < pageNum.length ? (
           <button onClick={() => setCurrentPage(currentPage + 1)}>Next</button>
         ) : (

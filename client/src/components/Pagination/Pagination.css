@@ -1,4 +1,32 @@
-.pag-container{
-    margin-top: 23px;
-    padding: 0;
+.pag-container {
+  margin-top: 23px;
+  padding: 0;
+}
+
+.div-list-container {
+  margin: 20px 0;
+}
+
+.div-list-container ul {
+  list-style: none;
+  text-align: center;
+}
+
+.div-list-container ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+.div-list-container ul li label {
+  display: block;
+  padding: 10px 20px;
+  color: #fff;
+  background: #024959;
+  text-decoration: none;
+}
+.div-list-container ul li label:hover {
+  background: #03738c;
+}
+.div-list-container ul li label:active {
+  background: #03738c;
+  font-weight: bold;
 }

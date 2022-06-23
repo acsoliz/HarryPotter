@@ -48,6 +48,7 @@
 }
 
 .profile-card {
+  max-height: 80%;
   border: solid;
   background: #ffb300;
   border-radius: 30px;
