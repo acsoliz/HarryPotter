@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { sortByAlph } from "../redux/actions";
+import { sortByAlph } from "../../redux/actions";
 
 const OrderCharacters = () => {
   const dispatch = useDispatch();

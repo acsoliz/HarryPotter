@@ -1,50 +1,30 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import FilterHouse from "../FilterHouse";
-import OrderCharacters from "../OrderCharacters";
 import Searchbar from "../Searchbar/Searchbar";
-import { FilterAncestry } from "./FilterAncestry";
 import "./Navbar.css";
+import Logo from "../../assets/icon-3.png"
 
 const Navbar = () => {
   return (
     <div>
       <header>
         <nav className="lw-nav navbar">
-          <div className="lw-nav__header navbar-header">
-            {/* <button
-              className="lw-nav__toggle navbar-toggle collapsed pull-right"
-              type="button"
-              data-target="#lw-navbar"
-              data-toggle="collapse"
-              aria-expanded="false"
-            >
-              <span className="sr-only">Toggle navigation</span>
-              <span className="glyphicon glyphicon-menu-hamburger"></span>
-            </button> */}
-
-            <a className="lw-nav__logo navbar-brand" href="#">
-              <img src="http://rodenbeek.com/preview/compass-logo-white.svg" />
-            </a>
+          <div className="div-logo">
+            <Link to="/main" className="link-logo" >
+              <img className="link-logo" src={Logo} height="50px" />
+            </Link>
           </div>
 
           <div
             className="lw-nav__menu-container navbar-collapse collapse"
             id="lw-navbar"
           >
-            <ul className="lw-nav__menu nav navbar-nav">
-              <li className="lw-nav__menu-item">
+            <ul className="ul-nav__menu">
+              <li className="search-bar">
                 <Searchbar />
               </li>
-              <li className="lw-nav__menu-item">
-                <FilterAncestry />
-              </li>
-              <li className="lw-nav__menu-item">
-                <FilterHouse />
-              </li>
 
-
-              <li className="lw-nav__menu-item">
+              <li className="btn-activities">
                 <div>
                   <Link to="/activities">
                     <button className="custom-btn btn-7">
@@ -53,9 +33,6 @@ const Navbar = () => {
                   </Link>
                 </div>
               </li>
-              {/* <li className="lw-nav__menu-item">
-                <OrderCharacters />
-              </li> */}
             </ul>
           </div>
         </nav>

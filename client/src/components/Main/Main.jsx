@@ -14,6 +14,7 @@ import Searchbar from "../Searchbar/Searchbar";
 import Pagination from "../Pagination/Pagination";
 import Nav from "../Nav/Nav";
 import Navbar from "../Navbar/Navbar";
+import NavbarTools from "../Navbar/NavbarTools";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -74,9 +75,9 @@ const Main = () => {
         <h1>Harry Potter</h1>
       </div> */}
       <Navbar />
+      <NavbarTools />
       <div className="container">
         {/* <Nav /> */}
-       
 
         <div className="content">
           {Array.isArray(characters) ? (

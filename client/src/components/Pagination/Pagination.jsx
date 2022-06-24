@@ -17,26 +17,40 @@ export default function Pagination({
   return (
     <div className="pag-container">
       <div>
-        {currentPage > 1 ? (
-          <button onClick={() => setCurrentPage(currentPage - 1)}>Prev</button>
-        ) : (
-          " "
-        )}
         <div className="div-list-container">
-          <ul>
+          <ul className="div-list-container-ul">
+            {currentPage > 1 ? (
+              <button
+                className="custom-btn btn-7"
+                onClick={() => setCurrentPage(currentPage - 1)}
+              >
+                Prev
+              </button>
+            ) : (
+              " "
+            )}
             {pageNum &&
               pageNum.map((e, i) => (
-                <li key={e} onClick={() => paginated(e)}>
-                  <label>{currentPage + i}</label>
+                <li
+                  key={e}
+                  className="div-list-container-ul-li"
+                  onClick={() => paginated(e)}
+                >
+                  <label className="custom-btn btn-7">{currentPage + i}</label>
                 </li>
               ))}
+            {currentPage < pageNum.length ? (
+              <button
+                className="custom-btn btn-7"
+                onClick={() => setCurrentPage(currentPage + 1)}
+              >
+                Next
+              </button>
+            ) : (
+              " "
+            )}
           </ul>
         </div>
-        {currentPage < pageNum.length ? (
-          <button onClick={() => setCurrentPage(currentPage + 1)}>Next</button>
-        ) : (
-          " "
-        )}
       </div>
     </div>
   );

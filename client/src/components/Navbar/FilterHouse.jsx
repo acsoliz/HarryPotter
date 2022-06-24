@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { filterHouses, getAllChars } from "../redux/actions";
+import { filterHouses, getAllChars } from "../../redux/actions";
 
 const FilterHouse = (value) => {
   const dispatch = useDispatch();

@@ -7,26 +7,26 @@
   margin: 20px 0;
 }
 
-.div-list-container ul {
+.div-list-container-ul {
   list-style: none;
   text-align: center;
 }
 
-.div-list-container ul li {
+.div-list-container-ul-li {
   display: inline-block;
   margin-right: 10px;
 }
 .div-list-container ul li label {
   display: block;
-  padding: 10px 20px;
+  padding: 0px 10px;
   color: #fff;
-  background: #024959;
+  background: black;
   text-decoration: none;
 }
-.div-list-container ul li label:hover {
+/* .div-list-container ul li label:hover {
   background: #03738c;
 }
 .div-list-container ul li label:active {
   background: #03738c;
   font-weight: bold;
-}
+} */
