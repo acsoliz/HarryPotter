@@ -22,7 +22,7 @@ const Main = () => {
 
   //------------------PAGINATION
   const [currentPage, setCurrentPage] = useState(1); //Pagina actual
-  const [charsByPage, setCharsByPage] = useState(8); // Cuantos videojuegos por page
+  const [charsByPage, setCharsByPage] = useState(10); // Cuantos videojuegos por page
   const lastChar = currentPage * charsByPage;
   const firstChar = lastChar - charsByPage;
   const currentChar = characters && characters.slice(firstChar, lastChar); //

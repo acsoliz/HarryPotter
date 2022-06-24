@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Searchbar from "../Searchbar/Searchbar";
 import "./Navbar.css";
 import Logo from "../../assets/icon-3.png"
+import OrderCharacters from "./OrderCharacters";
 
 const Navbar = () => {
   return (
@@ -32,6 +33,9 @@ const Navbar = () => {
                     </button>
                   </Link>
                 </div>
+              </li>
+              <li className="btn-activities">
+                <OrderCharacters/>
               </li>
             </ul>
           </div>
