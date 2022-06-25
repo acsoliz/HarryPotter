@@ -3,10 +3,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { getCharDetail } from "../../redux/actions";
 import "./Detail.css";
-
+import imgNotFound from'../../assets/charNotFound.jpg'
+import NotFound from '../NotFound/NotFound'
 const Detail = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
+  
+  
 
   const [wand, setWand] = useState(null);
 
@@ -16,12 +19,13 @@ const Detail = () => {
   }, []);
 
   const character = useSelector((state) => state.charDetail);
+  // console.log(character[0])
   // const wand = JSON.parse(character.wand);
 
-  if (!character) {
+  if (!character.name) {
     return (
       <div>
-        <h1>Loading....</h1>
+        <NotFound/>
       </div>
     );
   }

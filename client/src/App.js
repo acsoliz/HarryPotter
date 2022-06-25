@@ -7,6 +7,7 @@ import React, { useEffect } from "react";
 import "./App.css";
 import Detail from "./components/Detail/Detail";
 import Activities from "./components/Activities/Activities";
+import NotFound from "./components/NotFound/NotFound";
 
 function App() {
   const dispatch = useDispatch();
@@ -22,8 +23,7 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/characters/:id" element={<Detail />} />
         <Route path="/activities" element={<Activities />} />
-        <Route path="*" element={<div><h1>Not Found</h1></div>} />
-
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   );

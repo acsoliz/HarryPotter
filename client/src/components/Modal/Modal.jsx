@@ -65,6 +65,10 @@ const Modal = ({ isOpen, closeModal }) => {
             title: "There is a event with that title, please change it",
           });
         }
+        if (value.length < 3 || value.length > 35) {
+          return setError({ ...error, title: "max(35 characters)" });
+        }
+
         if (!/^[A-Za-z0-9\u00C0-\u017F ]+$/.test(value)) {
           return setError({ ...error, title: "Not special characters" });
         } else {
@@ -73,6 +77,9 @@ const Modal = ({ isOpen, closeModal }) => {
       case "place":
         if (value === "") {
           return setError({ ...error, place: "" });
+        }
+        if (value.length < 3 || value.length > 42) {
+          return setError({ ...error, place: "max 42 characters" });
         }
         if (!/^[A-Za-z0-9\u00C0-\u017F ]+$/.test(value)) {
           return setError({ ...error, place: "Not special characters" });
@@ -83,9 +90,11 @@ const Modal = ({ isOpen, closeModal }) => {
         if (value === "") {
           return setError({ ...error, commentscomments: "" });
         }
+        if (value.length < 5 || value.length > 120) {
+          return setError({ ...error, comments: "Min 5/ max 120 characters" });
+        }
         if (/[$%&|<>#]/.test(value)) {
           //const formato = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-          return setError({ ...error, comments: "Not special characters" });
         } else {
           return setError({ ...error, comments: "" });
         }
@@ -138,8 +147,8 @@ const Modal = ({ isOpen, closeModal }) => {
   //----------------AUX-------------------
   /////   Esto es para verificar si value (name)
   function auxiliar(value) {
-    console.log("Estoy recorriendo viegoames en busca de un nombre: ", value);
-    // antes de esto me traigo del state.videogames
+    console.log("Estoy recorriendo personajes en busca de un nombre: ", value);
+    // antes de esto me traigo del state.characters
     for (var i = 0; i < activities.length; i++) {
       if (activities[i].name == value) {
         return true;

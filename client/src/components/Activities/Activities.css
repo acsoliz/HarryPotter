@@ -24,6 +24,7 @@
   justify-content: space-evenly;
   overflow-y: auto;
   height: 20rem;
+  word-break:break-all;
 }
 
 .card-act {
@@ -32,6 +33,8 @@
   width: 5cm;
   border: 1px solid #fff;
   margin-bottom: 2rem;
+  overflow-y: auto;
+
   /* padding-bottom: 5px; */
 }
 
