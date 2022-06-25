@@ -22,6 +22,8 @@ function App() {
         <Route path="/main" element={<Main />} />
         <Route path="/characters/:id" element={<Detail />} />
         <Route path="/activities" element={<Activities />} />
+        <Route path="*" element={<div><h1>Not Found</h1></div>} />
+
       </Routes>
     </div>
   );

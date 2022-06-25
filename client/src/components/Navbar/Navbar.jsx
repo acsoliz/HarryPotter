@@ -10,10 +10,10 @@ const Navbar = () => {
     <div>
       <header>
         <nav className="lw-nav navbar">
-          <div className="div-logo">
-            <Link to="/main" className="link-logo" >
+          <div className="div-logo" onClick={()=> window.location.reload()} >
+            {/* <Link to="/main" className="link-logo" > */}
               <img className="link-logo" src={Logo} height="50px" />
-            </Link>
+            {/* </Link> */}
           </div>
 
           <div

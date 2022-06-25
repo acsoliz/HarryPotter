@@ -15,49 +15,36 @@
   flex-wrap: wrap;
   max-width: 90%;
   margin: 2rem;
-  border-radius: 20px;
+  border-radius: 40px;
   justify-content: center;
   overflow-y: auto;
   height: 33rem;
-  /* border: solid; */
 }
 .div-detail-container {
-  /* width: 125rem;
-  border: solid; */
   height: 100%;
   display: flex;
-  /* background: green; */
   border-radius:40px;
   border: solid;
 
 }
 .img-character {
   width: 100%;
-  /* min-width: 100%;  */
   border-radius: 40px;
   height: auto;
 }
 .div-image {
-  /* border-radius: 40px; */
-  /* border: solid; */
-  /* background: red; */
   width: 40%;
-  /* height: min-content; */
   height: 100%;
 }
 .div-image-text {
-  /* border: solid; */
-  /* background: red; */
   width: 60%;
   border-radius: 40px;
-  /* height: 100%; */
 }
 
 .profile-card {
   max-height: 80%;
-  /* border: solid; */
-  /* background: #ffb300; */
-  border-radius: 30px;
+
+  border-radius: 40px;
   width: 156rem;
   height: 56px;
   position: absolute;
@@ -359,7 +346,6 @@
   }
   @-webkit-keyframes materia {
     0% {
-      /* background: #e0e0e0; */
     }
     50% {
       -webkit-border-radius: 4px;
@@ -367,13 +353,11 @@
     100% {
       width: 280px;
       height: 440px;
-      /* background: #ffffff; */
       -webkit-border-radius: 4px;
     }
   }
   @keyframes materia {
     0% {
-      /* background: #e0e0e0; */
     }
     50% {
       border-radius: 4px;
@@ -381,7 +365,6 @@
     100% {
       width: 55rem;
       height: auto;
-      /* background: #f5f106; */
       border-radius: 40px;
     }
   }
