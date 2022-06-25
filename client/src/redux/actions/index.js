@@ -46,7 +46,6 @@ export const getCharDetail = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`${URL_GET}/filterId/${id}`);
-      console.log(data);
       return dispatch({
         type: GET_DETAIL,
         payload: data,

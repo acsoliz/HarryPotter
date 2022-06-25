@@ -48,16 +48,16 @@ const Main = () => {
   }
 
   //------------------BY ALPHABETIC
-  const [orderAlph, setorderAlph] = useState({
-    checked: null,
-  });
+  // const [orderAlph, setorderAlph] = useState({
+  //   checked: null,
+  // });
 
-  const handleChangeAlphabetic = (e) => {
-    dispatch(sortByAlph(e.target.value));
-    setorderAlph({
-      checked: e.target.value,
-    });
-  };
+  // const handleChangeAlphabetic = (e) => {
+  //   dispatch(sortByAlph(e.target.value));
+  //   setorderAlph({
+  //     checked: e.target.value,
+  //   });
+  // };
   //--------------------------------
 
   return (

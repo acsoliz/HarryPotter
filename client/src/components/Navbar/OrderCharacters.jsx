@@ -13,7 +13,7 @@ const OrderCharacters = () => {
     setorderAlph({
       checked: e.target.value,
     });
-    dispatch(sortByAlph(orderAlph));
+    dispatch(sortByAlph(orderAlph.checked));
   };
   return (
     <div>
