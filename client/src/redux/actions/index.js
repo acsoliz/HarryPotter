@@ -46,9 +46,14 @@ export const getCharDetail = (id) => {
   return async (dispatch) => {
     try {
       const { data } = await axios.get(`${URL_GET}/filterId/${id}`);
+      const char = data[0];
+      char.wand = (JSON.parse(data[0].wand));
+      console.log(char)
+      
+
       return dispatch({
         type: GET_DETAIL,
-        payload: data,
+        payload: char
       });
     } catch (error) {
       console.log(error);

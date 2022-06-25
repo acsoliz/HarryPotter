@@ -48,22 +48,46 @@ const Main = () => {
   }
 
   //------------------BY ALPHABETIC
-  // const [orderAlph, setorderAlph] = useState({
-  //   checked: null,
-  // });
+  const [orderAlph, setorderAlph] = useState({
+    checked: null,
+  });
 
-  // const handleChangeAlphabetic = (e) => {
-  //   dispatch(sortByAlph(e.target.value));
-  //   setorderAlph({
-  //     checked: e.target.value,
-  //   });
-  // };
+  const handleChangeAlphabetic = (e) => {
+    setorderAlph({
+      checked: e.target.value,
+    });
+    dispatch(sortByAlph(orderAlph.checked));
+  };
   //--------------------------------
 
   return (
     <div className="main-container">
       <Navbar />
       <NavbarTools />
+      <div className="order-alphabetic">
+        <div className="rb-container">
+          <input
+            id="opt1"
+            type="radio"
+            name="radio"
+            value="a-z"
+            onChange={handleChangeAlphabetic}
+          />
+          <label htmlFor="opt1" className="label1">
+            <span className="span-rd">A-z</span>
+          </label>
+          <input
+            id="opt2"
+            type="radio"
+            name="radio"
+            value="z-a"
+            onChange={handleChangeAlphabetic}
+          />
+          <label htmlFor="opt2" className="label2">
+            <span className="span-rd">Z-a</span>
+          </label>
+        </div>
+      </div>
       <div className="container">
         <div className="content">
           {Array.isArray(characters) ? (

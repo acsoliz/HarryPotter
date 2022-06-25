@@ -91,7 +91,6 @@ export default function rootReducer(state = initialState, action) {
               }
               return 0;
             });
-      console.log("Seberia estar ordenado", byAlph);
       return {
         ...state,
         characters: byAlph,

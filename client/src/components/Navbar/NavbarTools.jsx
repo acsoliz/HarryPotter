@@ -10,9 +10,9 @@ const NavbarTools = () => {
   return (
     <div className="tools-container">
       <ul className="ul-tools">
-        <li className="li-items-tools">
+        {/* <li className="li-items-tools">
           <OrderCharacters />
-        </li>
+        </li> */}
 
         <li className="li-items-tools">
           <FilterAncestry />

@@ -2,8 +2,9 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { filterHouses, getAllChars } from "../../redux/actions";
 
-const FilterHouse = (value) => {
+const FilterHouse = () => {
   const dispatch = useDispatch();
+  
   function handleOnChangeHouses(e) {
     e.preventDefault();
     if (e.target.value === "") return dispatch(getAllChars());

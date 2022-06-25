@@ -1,30 +1,6 @@
-/* html,
-body {
-  font-family: "Athiti", sans-serif;
-  width: 100%; 
-  height: 100%;
-  margin: 0;
-  background: green;
-  background-size: cover;
-  background-repeat: no-repeat;
-   position: relative;
-} */
-.main-container {
-   /* align-content: center;
-  overflow: hidden;
 
-  font-family: "Athiti", sans-serif;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.513), rgba(0, 0, 0, 0.438)),
-    url("../../assets/maxresdefault.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;  */
-
-  /* min-height: 100%; */
-  /* position: relative; */
-  /* margin-bottom: 40px; */
+.order-alphabetic{
+  padding-left: 4rem;
 }
 
 .cards {

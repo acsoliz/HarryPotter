@@ -11,18 +11,11 @@ const Detail = () => {
   const [wand, setWand] = useState(null);
 
   useEffect(() => {
-    // dispatch(clearDetail());
-    if (character?.hasOwnProperty("wand")) {
-      console.log("true");
-      setWand(JSON.parse(character.wand));
-      const wand2 = JSON.parse(character.wand);
-      console.log(wand, wand2);
-    }
+  
     dispatch(getCharDetail(id));
   }, []);
 
-  const charDetail = useSelector((state) => state.charDetail);
-  const character = charDetail[0];
+  const character = useSelector((state) => state.charDetail);
   // const wand = JSON.parse(character.wand);
 
   if (!character) {
@@ -41,7 +34,6 @@ const Detail = () => {
             <button className="custom-btn btn-7">volver</button>
           </Link>
         </div>
-        {/* <div className="card--detail--container"> */}
         <div className="profile-card">
           <div>
             <h1 className="character--name">{character.name}</h1>
@@ -63,25 +55,20 @@ const Detail = () => {
                 </div>
                 <div>
                   <h3>actor: {character.actor}</h3>
-                  {/* <h3>wood: {character.wand}</h3> */}
                 </div>
               </div><br/>
-              {wand ? (
                 <div>
                   <div>
-                    <h3>wand</h3>
+                    <h3><u>Wand</u></h3>
                   </div>
-                  <h3>wood: {wand.wood}</h3>
-                  <h3>core: {wand.core}</h3>
-                  <h3>length: {wand.length}</h3>
+                  <h3>wood: {character.wand?.wood}</h3>
+                  <h3>core: {character.wand?.core}</h3>
+                  <h3>length: {character.wand?.length}</h3>
                 </div>
-              ) : (
-                ""
-              )}
+           
             </div>
           </div>
         </div>
-        {/* </div> */}
       </div>
     </>
   );
