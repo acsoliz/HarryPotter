@@ -35,7 +35,6 @@ const Main = () => {
   }, [characters]); //de lo que depende
 
   const paginated = (pageNum) => {
-    console.log("Estoy dentro de PAGINATED ");
     setCurrentPage(pageNum);
   };
 
@@ -46,13 +45,6 @@ const Main = () => {
     e.preventDefault();
     if (e.target.value === "") return dispatch(getAllChars());
     dispatch(filterAncestry(e.target.value));
-  }
-
-  //------------------FILTER BY HOUSE
-  function handleOnChangeHouses(e) {
-    e.preventDefault();
-    if (e.target.value === "") return dispatch(getAllChars());
-    dispatch(filterHouses(e.target.value));
   }
 
   //------------------BY ALPHABETIC
@@ -70,15 +62,9 @@ const Main = () => {
 
   return (
     <div className="main-container">
-      {/* <div className="tittle">
-        <img src="" alt="" />
-        <h1>Harry Potter</h1>
-      </div> */}
       <Navbar />
       <NavbarTools />
       <div className="container">
-        {/* <Nav /> */}
-
         <div className="content">
           {Array.isArray(characters) ? (
             <Pagination

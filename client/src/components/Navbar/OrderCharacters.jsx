@@ -10,10 +10,10 @@ const OrderCharacters = () => {
 
   const handleChangeAlphabetic = (e) => {
     console.log(e.target.value)
-    dispatch(sortByAlph(e.target.value));
     setorderAlph({
       checked: e.target.value,
     });
+    dispatch(sortByAlph(orderAlph));
   };
   return (
     <div>

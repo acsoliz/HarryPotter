@@ -34,9 +34,6 @@ const Navbar = () => {
                   </Link>
                 </div>
               </li>
-              <li className="btn-activities">
-                <OrderCharacters/>
-              </li>
             </ul>
           </div>
         </nav>
