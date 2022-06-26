@@ -19,9 +19,10 @@ export default function Pagination({
       <div>
         <div className="div-list-container">
           <ul className="div-list-container-ul">
+              
             {currentPage > 1 ? (
               <button
-                className="custom-btn btn-7"
+                className="btn-prev"
                 onClick={() => setCurrentPage(currentPage - 1)}
               >
                 Prev

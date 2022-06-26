@@ -23,10 +23,48 @@
   background: black;
   text-decoration: none;
 }
-/* .div-list-container ul li label:hover {
-  background: #03738c;
-}
-.div-list-container ul li label:active {
-  background: #03738c;
-  font-weight: bold;
+/* 
+.div-button-prev{
+  margin-right: 10rem;
+  padding-right: 1rem;
 } */
+.btn-prev {
+  background: #000;
+  border-radius: 8px;
+  color: rgb(255, 253, 253);
+  line-height: 42px;
+  padding: 0;
+  border: none;
+  z-index: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  font-size: large;
+  margin-right: 0.5em;
+}
+.btn-prev:hover {
+  background: transparent;
+  color: #000;
+}
+.btn-prev:before,
+.btn-prev:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: auto;
+  height: 50%;
+  right: 0;
+  z-index: -1;
+  background: #000;
+  transition: all 0.3s ease;
+}
+.btn-prev:before {
+  top: 0;
+}
+.btn-prev:after {
+  bottom: 0;
+}
+.btn-prev:hover:before,
+.btn-prev:hover:after {
+  height: 0;
+  background-color: rgb(221, 219, 219);
+}
