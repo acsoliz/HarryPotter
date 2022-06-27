@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {  useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link, Navigate } from "react-router-dom";
-import { createActivity, getActivities } from "../../redux/actions";
+import { Link } from "react-router-dom";
+import { createActivity } from "../../redux/actions";
 import "./Modal.css";
 const Modal = ({ isOpen, closeModal }) => {
   const activities = useSelector((state) => state.activities);
@@ -98,6 +98,7 @@ const Modal = ({ isOpen, closeModal }) => {
         } else {
           return setError({ ...error, comments: "" });
         }
+        break 
       case "date":
         if (value === "") {
           return setError({ ...error, commentscomments: "" });

@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams, Link } from "react-router-dom";
 import { getCharDetail } from "../../redux/actions";
 import "./Detail.css";
-import imgNotFound from'../../assets/charNotFound.jpg'
 import NotFound from '../NotFound/NotFound'
 const Detail = () => {
   const dispatch = useDispatch();

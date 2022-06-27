@@ -1,8 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import FilterHouse from "../Navbar/FilterHouse";
-import OrderCharacters from "../Navbar/OrderCharacters";
-import Searchbar from "../Searchbar/Searchbar";
 import { FilterAncestry } from "../Navbar/FilterAncestry";
 import "./NavbarTools.css";
 

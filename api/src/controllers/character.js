@@ -38,7 +38,6 @@ async function getAllChars(req, res, next) {
 
 async function filterAncestry(req, res, next) {
   const { filterCharacters } = req.params;
-  console.log(filterCharacters);
   try {
     const newCharacters = await Character.findAll({
       where: {
@@ -58,7 +57,6 @@ async function filterById(req, res) {
   if ( /^[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[089ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(
     filterId
   )){
-  console.log("soy el filtro uuid true", filterId)
   try {
     const charactersId = await Character.findAll({
       where: {

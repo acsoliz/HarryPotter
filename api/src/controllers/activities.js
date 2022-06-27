@@ -23,7 +23,6 @@ async function createActivities(req, res, next) {
       place,
       comments,
     });
-    console.log("Soy el post ", activity);
     res.send("Request created successfully");
   } catch (error) {
     console.log(error);

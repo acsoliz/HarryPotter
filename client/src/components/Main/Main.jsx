@@ -1,20 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import "./Main.css";
 import Character from "../Character/Character";
 import { useDispatch } from "react-redux";
-import {
-  filterAncestry,
-  getAllChars,
-  filterHouses,
-  sortByAlph,
-} from "../../redux/actions";
-import Searchbar from "../Searchbar/Searchbar";
+import { sortByAlph } from "../../redux/actions";
 import Pagination from "../Pagination/Pagination";
-import Nav from "../Nav/Nav";
 import Navbar from "../Navbar/Navbar";
 import NavbarTools from "../Navbar/NavbarTools";
+import Loading from "../Loading/Loading";
 
 const Main = () => {
   const dispatch = useDispatch();
@@ -40,12 +33,34 @@ const Main = () => {
 
   //----------------------------------------------
 
-  //------------------FILTER BY ANCESTRY
-  function handleOnChangeAncestry(e) {
-    e.preventDefault();
-    if (e.target.value === "") return dispatch(getAllChars());
-    dispatch(filterAncestry(e.target.value));
-  }
+  //-------HOSES---------------------------------------
+  const filterOptions = auxiliar;
+  
+  
+  let houses = filterOptions?.map(item=>{
+    return [item.house,item]
+  });
+  var personasMapArr = new Map(houses); // Pares de clave y valor
+  
+  let unicos = [...personasMapArr.values()].map(char=>char.house); // Conversión a un array
+  
+  console.log(unicos)
+  //----------------------------------------------
+  //-------ANCESTRIES---------------------------------------
+ 
+  
+  let ancestries = filterOptions?.map(item=>{
+    return [item.ancestry,item]
+  });
+  personasMapArr = new Map(ancestries); // Pares de clave y valor
+  
+  let ancestriesUnicos = [...personasMapArr.values()].map(char=>char.ancestry); // Conversión a un array
+  
+  console.log(ancestriesUnicos)
+
+
+
+
 
   //------------------BY ALPHABETIC
   const [orderAlph, setorderAlph] = useState({
@@ -115,7 +130,7 @@ const Main = () => {
                 />
               ))
             ) : (
-              <div>Loading...</div>
+              <Loading />
             )}
           </div>
           {Array.isArray(characters) ? (
