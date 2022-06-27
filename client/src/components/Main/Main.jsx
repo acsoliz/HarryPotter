@@ -42,19 +42,19 @@ const Main = () => {
   });
   var personasMapArr = new Map(houses); // Pares de clave y valor
   
-  let unicos = [...personasMapArr.values()].map(char=>char.house); // Conversión a un array
+  let housesUniques = [...personasMapArr.values()].map(char=>char.house); // Conversión a un array
   
-  console.log(unicos)
+  console.log(housesUniques)
   //----------------------------------------------
   //-------ANCESTRIES---------------------------------------
- 
+
   
-  let ancestries = filterOptions?.map(item=>{
+     let ancestries = filterOptions?.map(item=>{
     return [item.ancestry,item]
   });
   personasMapArr = new Map(ancestries); // Pares de clave y valor
   
-  let ancestriesUnicos = [...personasMapArr.values()].map(char=>char.ancestry); // Conversión a un array
+  let ancestriesUnicos = [...personasMapArr.values()].map(char=>char.ancestry ); // Conversión a un array
   
   console.log(ancestriesUnicos)
 
