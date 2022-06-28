@@ -23,11 +23,9 @@ export const FilterAncestry = () => {
     (char) => char.ancestry
   ); // Conversión a un array
 
-  console.log(ancestriesUnicos);
 
   return (
     <div>
-      {/* <label>Ancestrys</label> */}
       <div className="dropdown dropdown-dark">
         <select
           className="dropdown-select"

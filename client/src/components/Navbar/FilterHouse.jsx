@@ -15,7 +15,6 @@ const FilterHouse = () => {
 
   let housesUniques = [...personasMapArr.values()].map((char) => char.house); // Conversión a un array
 
-  console.log(housesUniques, "Filter houses");
   //_____________________filtrado ___________________________
 
   function handleOnChangeHouses(e) {

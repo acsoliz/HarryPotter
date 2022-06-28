@@ -45,7 +45,6 @@ const Modal = ({ isOpen, closeModal }) => {
         // console.log(error);
       }
     } else {
-      // console.log('atenti soy el Flag para validar: ', flag);
       alert("Missing or invalid values");
     }
   };
@@ -131,7 +130,6 @@ const Modal = ({ isOpen, closeModal }) => {
       };
     }
     if (!state.date) {
-      console.log(state.date, "deberia estar en blacno");
       asignErrors = { ...asignErrors, date: "Must select a date" };
     }
     if (!state.comments.length) {
@@ -196,7 +194,6 @@ const Modal = ({ isOpen, closeModal }) => {
           </div>
           <div className="user-box textarea-box">
             <textarea
-              // maxlength="120"
               name="comments"
               value={state.comments}
               onChange={handleInputChange}
@@ -215,10 +212,6 @@ const Modal = ({ isOpen, closeModal }) => {
             </Link>
           </div>
         </form>
-
-        {/* <div>
-          <button onClick={closeModal}>close Modal</button>
-        </div> */}
       </div>
     </div>
   );

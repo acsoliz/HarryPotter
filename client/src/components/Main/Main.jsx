@@ -44,11 +44,10 @@ const Main = () => {
   
   let housesUniques = [...personasMapArr.values()].map(char=>char.house); // Conversión a un array
   
-  console.log(housesUniques)
   //----------------------------------------------
   //-------ANCESTRIES---------------------------------------
 
-  
+
      let ancestries = filterOptions?.map(item=>{
     return [item.ancestry,item]
   });
@@ -56,7 +55,6 @@ const Main = () => {
   
   let ancestriesUnicos = [...personasMapArr.values()].map(char=>char.ancestry ); // Conversión a un array
   
-  console.log(ancestriesUnicos)
 
 
 
