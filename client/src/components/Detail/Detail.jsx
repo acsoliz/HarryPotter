@@ -10,7 +10,7 @@ const Detail = () => {
   
   
 
-  const [wand, setWand] = useState(null);
+  // const [wand, setWand] = useState(null);
 
   useEffect(() => {
   

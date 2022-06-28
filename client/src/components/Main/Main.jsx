@@ -34,26 +34,26 @@ const Main = () => {
   //----------------------------------------------
 
   //-------HOSES---------------------------------------
-  const filterOptions = auxiliar;
+  // const filterOptions = auxiliar;
   
   
-  let houses = filterOptions?.map(item=>{
-    return [item.house,item]
-  });
-  var personasMapArr = new Map(houses); // Pares de clave y valor
+  // let houses = filterOptions?.map(item=>{
+  //   return [item.house,item]
+  // });
+  // var personasMapArr = new Map(houses); // Pares de clave y valor
   
-  let housesUniques = [...personasMapArr.values()].map(char=>char.house); // Conversión a un array
+  // let housesUniques = [...personasMapArr.values()].map(char=>char.house); // Conversión a un array
   
-  //----------------------------------------------
-  //-------ANCESTRIES---------------------------------------
+  // //----------------------------------------------
+  // //-------ANCESTRIES---------------------------------------
 
 
-     let ancestries = filterOptions?.map(item=>{
-    return [item.ancestry,item]
-  });
-  personasMapArr = new Map(ancestries); // Pares de clave y valor
+  //    let ancestries = filterOptions?.map(item=>{
+  //   return [item.ancestry,item]
+  // });
+  // personasMapArr = new Map(ancestries); // Pares de clave y valor
   
-  let ancestriesUnicos = [...personasMapArr.values()].map(char=>char.ancestry ); // Conversión a un array
+  // let ancestriesUnicos = [...personasMapArr.values()].map(char=>char.ancestry ); // Conversión a un array
   
 
 

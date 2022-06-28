@@ -31,7 +31,7 @@ const Activities = () => {
           </button>
           {/* </div> */}
         </div>
-        <img src={titleActivities}/>
+        <img src={titleActivities} alt=""/>
       </div>
       <div className="cards-wrapper cards-wrapper--fill">
         {activities[0] &&
