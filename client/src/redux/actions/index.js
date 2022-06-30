@@ -7,6 +7,7 @@ export const GET_BY_NAME = "GET_BY_NAME";
 export const GET_DETAIL = "GET_DETAIL";
 export const NEW_ACTIVITY = "NEW_ACTIVITY";
 export const GET_ACTIVITIES = "GET_ACTIVITIES";
+export const FILTER_NAME = "FILTER_NAME";
 const URL_GET = "/characters";
 const URL_ACTIVITIES = "/activities";
 
@@ -110,4 +111,13 @@ export const getActivities = () => {
       console.log(error);
     }
   };
+};
+export const filterName = (name) => {
+  console.log(name)
+
+  return (dispatch) =>
+    dispatch({
+      type: FILTER_NAME,
+      payload: name,
+    });
 };

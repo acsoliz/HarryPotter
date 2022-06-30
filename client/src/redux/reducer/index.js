@@ -7,6 +7,7 @@ import {
   GET_DETAIL,
   NEW_ACTIVITY,
   GET_ACTIVITIES,
+  FILTER_NAME,
 } from "../actions";
 const initialState = {
   characters: [],
@@ -103,6 +104,26 @@ export default function rootReducer(state = initialState, action) {
       return {
         ...state,
         activities: action.payload,
+      };
+    case FILTER_NAME:
+      const charsByName = state.characters;
+      // console.log(charsByName[0].name);
+      if (!action.payload == "") {
+        const filterByName = charsByName?.filter((char) =>
+          char.name.includes(action.payload)
+        );
+
+        console.log(filterByName, "resultado de busqueda");
+        return {
+          ...state,
+          characters: filterByName,
+          // filters: charsFiltered,
+        };
+      }
+      return {
+        ...state,
+        characters: allCharacters,
+        // filters: charsFiltered,
       };
 
     default:
