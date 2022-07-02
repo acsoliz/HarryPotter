@@ -49,12 +49,11 @@ export const getCharDetail = (id) => {
       const { data } = await axios.get(`${URL_GET}/filterId/${id}`);
       // console.log(data)
       const char = data[0];
-      char.wand = (JSON.parse(data[0].wand));
-      
+      char.wand = JSON.parse(data[0].wand);
 
       return dispatch({
         type: GET_DETAIL,
-        payload: char
+        payload: char,
       });
     } catch (error) {
       console.log(error);
@@ -113,8 +112,6 @@ export const getActivities = () => {
   };
 };
 export const filterName = (name) => {
-  console.log(name)
-
   return (dispatch) =>
     dispatch({
       type: FILTER_NAME,

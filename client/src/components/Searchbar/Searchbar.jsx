@@ -14,7 +14,7 @@ const Searchbar = () => {
   }, [name]);
 
   const handleInputChange = ({ target }) => {
-    setName(target.value);
+    setName(target.value);  
     //action buscar
     // dispatch(filterName(name));
     // console.log(name)
